@@ -9,19 +9,35 @@
     <title>My Wishlist</title>
 </head>
 <body>
-    <nav>
-        <ol>
-            <li><a href="#products" data-link="products" class="nav-link active_nav">Products</a></li>
-            <li><a href="#basket" data-link="basket" class="nav-link">Basket</a></li>
-        </ol>
-    </nav>
+    <header>
+        <nav class="navigation">
+            <div>
+                <a href="#products" data-link="products" class="nav-link active-nav">Products</a>
+                <a href="#wishlist" data-link="wishlist" class="nav-link">Wishlist</a>
+            </div>
+        </nav>
+    </header>
     <main>
         <div class="page active" id="products">
-            <h1>Products</h1>
+            <div class="flex-conatiner">
+                <div class="flex-grid" id="products_grid"></div>
+                <div class="pagination">
+                    <button class="button paginate-button previous">Prev</button>
+                    <button class="button paginate-button next">Next</button>
+                </div>
+            </div>
         </div>
 
-        <div class="page" id="basket">
-            <h1>Basket</h1>
+        <div class="page" id="wishlist">
+            <div class="flex-conatiner">
+                <div class="flex-grid">
+                    <table class="wishlist-table" id="test"></table>
+                    <div class="total">
+                        <p class="total-count">Total Count</p>
+                        <p class="total-price">Total Price</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </main>
 
