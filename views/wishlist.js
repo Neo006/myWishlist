@@ -9,7 +9,10 @@ export default class Wishlist {
     // Rendering wishlist items
     renderWishlist(data) {
         document.querySelector(".wishlist-table").innerHTML = "";
-        let wishlist = JSON.parse(window.localStorage.getItem('wishlist'));
+        let wishlist = [];
+        if(window.localStorage.length) {
+            wishlist = JSON.parse(window.localStorage.getItem('wishlist'));
+        }
         // calculate wishlist items total count
         this.totalCount = wishlist.length;
         this.renderTotalCount();

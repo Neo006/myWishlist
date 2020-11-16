@@ -1,7 +1,11 @@
 export default class Products {
     constructor(data) {
         this.data = data;
-        this.wishlist = JSON.parse(window.localStorage.getItem('wishlist'));
+        if(window.localStorage.length) {
+            this.wishlist = JSON.parse(window.localStorage.getItem('wishlist'));
+        } else {
+            this.wishlist = [];
+        }
         this.productList = document.getElementById('products_grid');
         this.previous = document.querySelector(".previous");
         this.next = document.querySelector(".next");
